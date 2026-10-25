@@ -3,15 +3,17 @@
 `ub-mode` is an agent skill that enforces disciplined software engineering principles when writing or changing code:
 
 1. **First Make it Work** — Laziness Protocol, Foundational Thinking, TDD, Redesign From First Principles, Attack the Premise, Subtract Before You Add, Outcome-Oriented Execution, Build the Lever, and Architecture (Model the Domain, Boundary Discipline, Type System Discipline, Make Operations Idempotent, Separate Before Serializing Shared State).
-2. **Then Make it Right** — Fix Root Causes, Sequence Work into Verifiable Units, Test Behavior (Not Implementation), [Crapper](https://github.com/unclebob/crapper) ($\text{CRAP} < 10$), [Dryer](https://github.com/unclebob/dryer) (duplication $< 0.8$), [Mutator](https://github.com/unclebob/mutator) (cover the uncovered, kill the survivors, delete dead code), and Refactoring.
+2. **Then Make it Right** — Fix Root Causes, Sequence Work into Verifiable Units, Test Behavior (Not Implementation), [Crapper](https://github.com/unclebob/crapper) (`CRAP < 10`), [Dryer](https://github.com/unclebob/dryer) (duplication `< 0.8`), [Mutator](https://github.com/unclebob/mutator) (cover the uncovered, kill the survivors, delete dead code), and Refactoring.
 3. **Practice** — Keep a Log, Guard the Context Window, Worktree Cleanup, and Commit and Push in small ordered commits.
 
-## Companion Tools
+## Companion Tool Repositories
 
-- [crapper](https://github.com/unclebob/crapper) — Cyclomatic complexity, test coverage, and CRAP score analysis.
-- [dryer](https://github.com/unclebob/dryer) — Structural duplication detector.
-- [mutator](https://github.com/unclebob/mutator) — Mutation testing tool.
-- [uml-viewer](https://github.com/unclebob/uml-viewer) — Component, metric, and dependency visualizer.
+`ub-mode` relies on deterministic quality-gate tools to enforce structure, complexity, duplication, and test thoroughness:
+
+- [unclebob/crapper](https://github.com/unclebob/crapper) (Clojure version: [unclebob/crap4clj](https://github.com/unclebob/crap4clj)) — Computes cyclomatic complexity, test coverage, and CRAP score per function so every function stays under the CRAP threshold (`< 10`).
+- [unclebob/dryer](https://github.com/unclebob/dryer) — Detects structural code duplication so duplicate blocks (`>= 0.8` similarity) are eliminated.
+- [unclebob/mutator](https://github.com/unclebob/mutator) (Clojure version: [unclebob/clj-mutate](https://github.com/unclebob/clj-mutate)) — Runs mutation testing to expose uncovered code and surviving mutants that tests fail to catch.
+- [unclebob/uml-viewer](https://github.com/unclebob/uml-viewer) — Visualizes components, coverage, CRAP, mutation scores, and dependency directions.
 
 ## Installation
 
