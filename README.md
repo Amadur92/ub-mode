@@ -10,9 +10,9 @@
 
 `ub-mode` relies on deterministic quality-gate tools to enforce structure, complexity, duplication, and test thoroughness:
 
-- [unclebob/crapper](https://github.com/unclebob/crapper) (Clojure version: [unclebob/crap4clj](https://github.com/unclebob/crap4clj)) — Computes cyclomatic complexity, test coverage, and CRAP score per function so every function stays under the CRAP threshold (`< 10`).
+- [unclebob/crapper](https://github.com/unclebob/crapper) — Computes cyclomatic complexity, test coverage, and CRAP score per function so every function stays under the CRAP threshold (`< 10`).
 - [unclebob/dryer](https://github.com/unclebob/dryer) — Detects structural code duplication so duplicate blocks (`>= 0.8` similarity) are eliminated.
-- [unclebob/mutator](https://github.com/unclebob/mutator) (Clojure version: [unclebob/clj-mutate](https://github.com/unclebob/clj-mutate)) — Runs mutation testing to expose uncovered code and surviving mutants that tests fail to catch.
+- [unclebob/mutator](https://github.com/unclebob/mutator) — Runs mutation testing to expose uncovered code and surviving mutants that tests fail to catch.
 - [unclebob/uml-viewer](https://github.com/unclebob/uml-viewer) — Visualizes components, coverage, CRAP, mutation scores, and dependency directions.
 
 ## Installation
