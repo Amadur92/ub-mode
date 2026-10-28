@@ -17,7 +17,7 @@ From a Codex environment with the built-in skill installer:
 
 ```bash
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo Amadur92/ub-mode --ref master --path . --name ub-mode
+  --repo Amadur92/ub-mode --ref master --path . --name ub-mode --method git
 ```
 
 The skill becomes available on the next turn. Invoke it as `$ub-mode` or ask for its disciplined coding workflow.
