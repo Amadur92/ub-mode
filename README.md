@@ -9,7 +9,7 @@ This fork makes the workflow proportional to the task:
 - Refactor when there is a concrete design problem to solve.
 - Follow the user's Git workflow. The skill does not require commits, pushes, or an action-by-action log.
 
-The skill is in [`SKILL.md`](SKILL.md). It contains no executable code or bundled dependencies.
+The skill is in [`ub-mode/SKILL.md`](ub-mode/SKILL.md). It contains no executable code or bundled dependencies.
 
 ## Install for Codex
 
@@ -17,7 +17,7 @@ From a Codex environment with the built-in skill installer:
 
 ```bash
 python3 ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py \
-  --repo Amadur92/ub-mode --ref master --path . --name ub-mode --method git
+  --repo Amadur92/ub-mode --ref master --path ub-mode --method git
 ```
 
 The skill becomes available on the next turn. Invoke it as `$ub-mode` or ask for its disciplined coding workflow.
